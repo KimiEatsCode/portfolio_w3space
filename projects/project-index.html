@@ -1,0 +1,91 @@
+ <!DOCTYPE html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="Sarah Kimi Rettig Portfolio">
+  <meta name="keywords" content="HTML, CSS, JavaScript">
+  <meta name="author" content="Sarah Kimi Rettig">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../../style.css">
+  <link rel="stylesheet" href="../../w3-css-modal.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+  
+
+</head>
+
+<body>
+
+  <div id="project-content">
+
+  <span id="top-print"></span>
+  <span id="top-web"></span>
+  <span id="top-marketing"></span>
+  <span id="top-genai"></span>
+  <span id="top-code"></span>
+
+    <div id="arrow-container">
+      <a href="#home"><span id="profile"></span></a>
+
+      <a href="./assets/Sarah_Kimi_Rettig_Resume_7-25-2025.pdf" target="_blank"><span id="resume"></span></a>
+      <button id="left-arrow">PREV</button>
+      <button id="right-arrow">NEXT</button>
+      </ul>
+    </div>
+
+    <div id="project-center-content">
+        <!-- <div id="bg-image" translate="no"> </div> -->
+        <div id="project-brand-refresh" class="timeline"></div>
+      <!-- <div id="home" class="timeline"></div>
+      <div id="print" class="timeline"></div>
+      <div id="web" class="timeline"></div>
+      <div id="code" class="timeline"></div>
+      <div id="marketing" class="timeline"></div>
+      <div id="genAI" class="timeline"></div> -->
+    </div>
+    <!--end center content-->
+  </div>
+  <!--end of main-content-->
+
+</body>
+<script type="text/javascript" src="script.js"></script>
+
+<script type="text/javascript">
+//jquery below 
+  $(document).ready(function () {
+
+    $("#project-brand-refresh").load("brand-refresh.html");
+    // $("#print").load("html-content/print.html");
+    // $("#web").load("html-content/web.html");
+    // $("#code").load("html-content/code.html");
+    // $("#marketing").load("html-content/marketing.html");
+    // $("#genAI").load("html-content/genAI.html");
+
+    $(window).scroll(function () {
+      if ($(this).scrollTop() > 50) {
+        $('#arrow-container').fadeOut();
+      } else {
+        $('#arrow-container').fadeIn();
+      };
+    })
+
+    $(window).scroll(function () {
+      if ($(this).scrollTop() > 50) {
+        document.getElementById("center-content").style.overflowX = "hidden";
+      } 
+      });
+
+     $(window).scroll(function () {
+        if ($(this).scrollTop() > 50) {
+          $('.back-up-link').css('display', 'block');
+        } else {
+          $('.back-up-link').css('display', 'none');
+        }
+      });
+    
+    });
+
+
+</script>
+
+</html>

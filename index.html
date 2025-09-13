@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="Sarah Kimi Rettig Portfolio">
+  <meta name="keywords" content="HTML, CSS, JavaScript">
+  <meta name="author" content="Sarah Kimi Rettig">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="stylesheets/style.css">
+   <link rel="stylesheet" href="stylesheets/modal-styles.css">
+
+  <link rel="stylesheet" href="stylesheets/snackbar-message-style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+</head>
+
+<body>
+
+  <span id="top-print"></span>
+  <span id="top-web"></span>
+  <span id="top-marketing"></span>
+  <span id="top-genai"></span>
+  <span id="top-code"></span>
+
+   <a href="./assets/Sarah_Kimi_Rettig_Resume_9-6-2025.pdf" target="_blank"><span id="resume"></span></a>
+  
+    <!-- <div id="arrow-container">
+      <a href="#home"><span id="profile"></span></a>
+      <a href="./assets/Sarah_Kimi_Rettig_Resume_7-25-2025.pdf" target="_blank"><span id="resume"></span></a>
+      <button id="left-arrow">PREV</button>
+      <button id="right-arrow">NEXT</button>
+      </ul>
+    </div> -->
+
+  
+    <div id="left-arrow-container">
+      <button id="left-arrow"></button>
+    </div>
+
+    <div id="right-arrow-container">      
+      <button id="right-arrow"></button>
+    </div>
+
+
+<div id="center-content">
+ 
+<div id="bg-image" translate="no"> </div>
+<!--using translate no because text in background image needs to be non-translated -->
+
+<div id="htmlFile"></div>
+
+</div><!--end of center content-->
+
+<div class="backup-container">
+  <a href="#top-web"><span class="back-up-link"></span></a>
+</div>
+
+</body>
+
+<script type="text/javascript" src="scripts/script.js"></script>
+
+<script type="text/javascript">
+//jquery below 
+  $(document).ready(function () {
+
+    $("#htmlFile").load("category-html-content/home.html");
+  
+    $(window).scroll(function () {
+      if ($(this).scrollTop() > 50) {
+        console.log("scrolling");
+        $('#left-arrow-container').fadeOut();
+        //  document.getElementById("center-content").style.overflowX = "hidden";
+      } else {
+        $('#left-arrow-container').fadeIn();
+      };
+    })
+
+        $(window).scroll(function () {
+      if ($(this).scrollTop() > 50) {
+        console.log("scrolling");
+        $('#right-arrow-container').fadeOut();
+         document.getElementById("center-content").style.overflowX = "hidden";
+      } else {
+        $('#right-arrow-container').fadeIn();
+      };
+    })
+
+         $(window).scroll(function () {
+        if ($(this).scrollTop() > 50) {
+          $('.back-up-link').css('display', 'block');
+        } else {
+          $('.back-up-link').css('display', 'none');
+        }
+      });
+    });
+
+</script> 
+
+</html>

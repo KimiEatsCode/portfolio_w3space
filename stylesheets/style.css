@@ -1,0 +1,530 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,300,900,700,500);
+
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined");
+
+/*import material symbols link below does not work
+/* @import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"); */
+
+html {
+  scroll-behavior: smooth;
+  touch-action: manipulation;
+}
+body {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  line-height: 1.5em;
+  margin: 0;
+  padding: 0;
+overflow-x: hidden;
+}
+
+h1,
+h2 {
+  color: #fff;
+  font-weight: bold;
+}
+
+.project-page-heading h1,
+.project-page-heading h2 {
+  color: #000;
+  font-weight: bold;
+  padding-left:11%;
+}
+
+h1 {
+  font-size:2.5em;
+  line-height: 1em;
+}
+
+h2 {
+  font-size: 2em;
+}
+
+h3 {
+  font-size: 1.5em;
+  color: #fff;
+  font-weight: 500;
+  line-height: 1.2em;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  padding: 10px 0;
+  list-style: disc;
+  margin-left: 17px;
+}
+
+li.list-icon {
+  list-style: "\e8f9";
+  font-family: "Material Icons Outlined";
+  color: #fff;
+}
+
+.backup-container a {
+  color:#fff;
+  opacity: 0.7;
+  text-decoration: none;
+}
+
+#right-arrow-container {
+  position:fixed;
+  right:0;
+    display: flex;
+    justify-self: flex-end;
+    background-color: #fff;
+    height: 100vh;
+    opacity: 0.4;
+    width: 50px;
+    top: 0;
+}
+
+#left-arrow-container {
+      position: fixed;
+      left:0;
+    display: flex;
+    justify-self: flex-start;
+    background-color: #ccc;
+    height: 100vh;
+    opacity: 0.4;
+      width: 50px;
+    top: 0;
+}
+
+
+button#right-arrow, button#left-arrow {
+  color:#000;
+  background:0;
+  border:none;
+}
+
+button#right-arrow::after {
+    position: absolute;
+    content: "\e5cc";
+    font-family: "Material Icons Outlined";
+    font-size: 8em;
+    right: -38px;
+    display: inline-block;
+    vertical-align: middle;
+    top: 200px;
+}
+
+button#left-arrow::after {
+    position: absolute;
+    content: "\e5cb";
+    font-family: "Material Icons Outlined";
+    font-size: 8em;
+    left: -42px;
+    display: inline-block;
+    vertical-align: middle;
+    top: 200px;
+}
+
+
+/* 
+#arrow-container {
+  position: fixed;
+  display: flex;
+  flex-direction: row;
+  justify-content:space-evenly;
+  width: 100%;
+  z-index: 999;
+  bottom: 0;
+  background-color: #afafaf !important;
+  padding: 10px;
+  flex-wrap: wrap;
+  gap: 10px;
+} */
+/* 
+#arrow-container > button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border:none;
+  border-radius: 10px;
+  width: 100px;
+  margin-left: 5px;
+  background-color: #fff;
+  font-weight: bold;
+  color: #888;
+} */
+
+#arrow-container a {
+  text-decoration: none;
+}
+
+.backup-container {
+  float:right;
+  padding-right: 90px;
+  text-decoration: none;
+}
+
+.back-up-link {
+  display:none;
+}
+
+.back-up-link::before {
+  content: "\e316";
+  font-family: "Material Icons Outlined";
+  font-size: 100px;
+}
+
+#htmlFile {
+  padding-left:130px;
+}
+
+
+#resume {
+    position: absolute;
+    z-index: 999;
+    display: block;
+    right: 100px;
+    top: 20px;
+    opacity: 0.7;
+}
+
+.home-page-heading {
+  text-align:left;
+}
+
+.page-heading {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 20px;
+  height: 100vh;
+}
+
+.project-page-heading {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 20px;
+  color: #000;
+}
+
+.intro {
+  text-align: left;
+    font-size: 1em;
+    line-height: 30px;
+    font-weight: 400;
+    padding-right: 5%;
+    color: #fff;
+    max-width: 60%;
+}
+
+ul.inine-list {
+    list-style-type: none;
+    display: inline-block;
+    width: 100%;
+}
+
+ul.inine-list li {
+    float: left!important;
+    line-height: 2px;
+    margin-right: 15px;
+    margin-left:0px;
+    list-style-type: none;
+    height:76px;
+}
+
+li.resume {
+    margin-top:15px;
+}
+
+
+.view-more-link span {
+  font-size: 25em;
+  color: #fff;
+}
+
+.view-more-link .material-icons-outlined:hover {
+  color:#bb88da;
+  animation: pulse 0.8s ease-out;
+}
+
+@keyframes pulse {
+  0% {
+    transform-y:translateY(0);
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+      transform: translateY(25px);
+  }
+  100% {
+    opacity: 1;
+    transform-y:translateY(0);
+  }
+}
+
+
+#profile::before {
+  content: "\e7fd";
+  font-family: "Material Icons Outlined";
+  font-size: 50px;
+  color: #fff;
+  line-height: 1em;
+}
+
+
+#resume::before {
+  content: "\e873";
+  font-family: "Material Icons Outlined";
+  font-size: 50px;
+  color: #fff;
+  line-height: 1em;
+}
+
+.project-content {
+  color: #000;
+  display: flex;
+  padding-left:11%;
+  width:80%;
+}
+
+.project-content.feature-image {
+  /* width: 100%; */
+  height: 300px;
+  margin:70px 0px 20px 0px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  /* align-items: flex-end;
+  justify-content: flex-end; */
+}
+
+.image-url:after {
+  content: "\e89e";
+  font-family: "Material Icons Outlined";
+  font-size: 50px;
+  color: #000;
+  background-color: #fff;
+  padding: 14px;
+  border-radius: 60%;
+}
+
+a.image-url {
+    justify-content: right;
+    display: flex;
+    color: #fff;
+    margin-bottom:20px;
+}
+
+#bg-image {
+    position: absolute;
+    top: 270px;
+    left: 0;
+    z-index: -1;
+    opacity: 0.2;
+}
+
+#bg-image::before {
+  font-size: 34em;
+  content: "𛱔𛱕𛱖𛱗𛱘𛱙𛱚§𛱩𛱪𛱰𛱱𛱲𛱳𛱴𛰀𛰁𛰂𛰃𛰄𛰅𛰆𛲖𛲗𛲘𛲙𛰅𛰔𛱢𛱣𛱙𛱔𛱕𛱖𛱤𛱥§𛱦𛱧𛱨𛰀𛰁𛰑𛱔𛱕𛱖𛱗𛱘𛱙𛱩𛱪𛱰𛱱𛱲𛱳𛱴 𛰀𛰁𛰂𛰃𛰄𛰅𛰆𛲔𛲕𛲖𛲗𛲘𛲙𛰅𛰎𛰏𛰐𛰑𛰒𛰓 𛰔 𛱢𛱣𛱙𛱔𛱕𛱖𛱤𛱥𛱦𛱧𛱨𛰀𛰁𛰑";
+  font-family: "Roboto", sans-serif;
+  font-weight: 900;
+  letter-spacing: 22px;
+  line-height: 75px;
+  color: #fff;
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  animation: bg-animation 300s linear infinite;
+}
+
+@keyframes bg-animation {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+#center-content {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  text-align:left;
+  height:fit-content;
+  scroll-behavior: smooth;
+  scroll-padding-block-start: 0;
+}
+
+#project-center-content {
+  color: #000;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding-bottom:100px;
+}
+
+#center-content button {
+    font-weight: bold;
+    margin-left: 10px;
+    margin-top:15px;
+    color: #000;
+    background-color: #fff;
+    margin-bottom: 20px;
+    width:200px;
+    height:40px;
+}
+
+#center-content button a {
+  text-decoration: none;
+  color: #000;
+}
+
+#center-content button:after {
+    content: "\e89e";
+    font-family: "Material Icons Outlined";
+    font-size: 1.3em;
+    margin-left: 5px;
+    vertical-align: text-bottom;
+}
+
+button {
+  font-family: Roboto, sans-serif !important;
+  font-size: 15px;
+  margin: 0;
+  border-radius: 15px;
+  padding: 5px 10px;
+}
+
+.timeline-container {
+  /* display: flex;
+  flex-direction: column;
+  padding-left: 50px;
+  row-gap: 30px;
+  justify-content: flex-start;
+  flex: 0 0 100%;
+  width: 1100px; */
+  padding-top: 30px;
+}
+
+.timeline-about {
+  color: #fff;
+  /* padding-right: 20%; */
+  flex-direction: column;
+  /* padding-left: 100px; */
+  justify-content: flex-start;
+  flex: 0 0 100%;
+  padding-top: 30px;
+}
+
+.timeline-content {
+  color: #fff;
+  padding-top:50px;
+}
+
+.timeline-content h2 {
+    margin-top: 70px;
+}
+
+.timeline-project {
+  color: #fff;
+  padding-right: 40%;
+}
+
+/* @media only screen and (max-width: 1000px) { */
+@media only screen and (max-width: 748px) {
+
+#htmlFile {
+    padding:0;
+}
+
+#resume {
+    position: absolute;
+    z-index: 999;
+    display: block;
+    right: 15px;
+    top: 20px;
+    opacity: 0.7;
+}
+
+.home-page-heading h1 {
+  padding: 0 15%;
+  text-align:center;
+  margin-top:0px;
+}
+
+#center-content {
+  text-align:center;
+  padding-top:90px;
+}
+
+.timeline-content{
+  padding:20px 20%;
+}
+
+.timeline-about {
+  padding-top:0px;
+}
+
+.timeline-container {
+  padding-top: 50px;
+}
+
+.intro {
+  padding:0 5%;
+  text-align:center;
+  justify-self:center;
+  max-width:90%;
+}
+
+.view-more-link span {
+  font-size: 18em;
+}
+
+#left-arrow-container {
+    position: fixed;
+    left: 0;
+    background-color: #ccc;
+    height: 70px;
+    width: 50%;
+    bottom: 0;
+    top:unset;
+}
+
+ button#left-arrow::after {
+    position: absolute;
+    content: "\e5cb";
+    font-family: "Material Icons Outlined";
+    font-size: 5em;
+    left:0;
+    top: unset;
+    bottom:0;  
+}
+
+#right-arrow-container {
+    position: fixed;
+    right: 0;
+    background-color: #fff;
+    height: 70px;
+    width: 50%;
+    bottom: 0;
+    top:unset;
+}
+
+ button#right-arrow::after {
+    position: absolute;
+    content: "\e5cc";
+    font-family: "Material Icons Outlined";
+    font-size: 5em;
+    right: 0;
+    bottom:0;
+    top: unset;
+
+}
+
+.backup-container {
+  text-align: center;
+  margin-top: 50px;
+  width: 100%;
+  padding-right: 0;
+}
+
+}
