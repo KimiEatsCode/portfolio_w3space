@@ -15,7 +15,7 @@ body {
   line-height: 1.5em;
   margin: 0;
   padding: 0;
-overflow-x: hidden;
+  overflow-x: hidden;
 }
 
 h1,
@@ -350,8 +350,7 @@ a.image-url {
   flex-wrap: nowrap;
   text-align:left;
   height:fit-content;
-  scroll-behavior: smooth;
-  scroll-padding-block-start: 0;
+  width:100%;
 }
 
 #project-center-content {
@@ -371,6 +370,12 @@ a.image-url {
     margin-bottom: 20px;
     width:200px;
     height:40px;
+    line-height: 18px;
+}
+
+#center-content button:hover {
+  color:#fff;
+  background-color:#000;
 }
 
 #center-content button a {
@@ -429,8 +434,12 @@ button {
   padding-right: 40%;
 }
 
-/* @media only screen and (max-width: 1000px) { */
-@media only screen and (max-width: 748px) {
+@media only screen and (max-width: 1000px) {
+/* @media only screen and (max-width: 748px) { */
+
+body {
+  overflow-x:hidden;
+}
 
 #htmlFile {
     padding:0;
