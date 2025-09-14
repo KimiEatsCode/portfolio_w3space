@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Roboto:400,300,900,700,500);
+ @import url(https://fonts.googleapis.com/css?family=Roboto:400,300,900,700,500);
 
 @import url("https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined");
 
@@ -7,15 +7,20 @@
 
 html {
   scroll-behavior: smooth;
-  touch-action: manipulation;
+  touch-action:none;
+  overflow-x:hidden;
+  height:100%;
 }
+
 body {
+  position: relative;
   font-family: "Roboto", sans-serif;
   font-weight: 300;
   line-height: 1.5em;
   margin: 0;
   padding: 0;
   overflow-x: hidden;
+  height:100%;
 }
 
 h1,
@@ -351,6 +356,7 @@ a.image-url {
   text-align:left;
   height:fit-content;
   width:100%;
+  overflow-x:hidden;
 }
 
 #project-center-content {
@@ -463,6 +469,7 @@ body {
 #center-content {
   text-align:center;
   padding-top:90px;
+   overflow-x:hidden;
 }
 
 .timeline-content{
