@@ -2,14 +2,10 @@
 
 @import url("https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined");
 
-/*import material symbols link below does not work
-/* @import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"); */
-
 html {
   scroll-behavior: smooth;
   touch-action:none;
   overflow-x:hidden;
-  height:100%;
 }
 
 body {
@@ -129,35 +125,6 @@ button#left-arrow::after {
     top: 200px;
 }
 
-
-/* 
-#arrow-container {
-  position: fixed;
-  display: flex;
-  flex-direction: row;
-  justify-content:space-evenly;
-  width: 100%;
-  z-index: 999;
-  bottom: 0;
-  background-color: #afafaf !important;
-  padding: 10px;
-  flex-wrap: wrap;
-  gap: 10px;
-} */
-/* 
-#arrow-container > button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border:none;
-  border-radius: 10px;
-  width: 100px;
-  margin-left: 5px;
-  background-color: #fff;
-  font-weight: bold;
-  color: #888;
-} */
-
 #arrow-container a {
   text-decoration: none;
 }
@@ -239,7 +206,6 @@ li.resume {
     margin-top:15px;
 }
 
-
 .view-more-link span {
   font-size: 25em;
   color: #fff;
@@ -291,14 +257,11 @@ li.resume {
 }
 
 .project-content.feature-image {
-  /* width: 100%; */
   height: 300px;
   margin:70px 0px 20px 0px;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  /* align-items: flex-end;
-  justify-content: flex-end; */
 }
 
 .image-url:after {
@@ -406,24 +369,16 @@ button {
 }
 
 .timeline-container {
-  /* display: flex;
-  flex-direction: column;
-  padding-left: 50px;
-  row-gap: 30px;
-  justify-content: flex-start;
-  flex: 0 0 100%;
-  width: 1100px; */
   padding-top: 30px;
 }
 
 .timeline-about {
   color: #fff;
-  /* padding-right: 20%; */
   flex-direction: column;
-  /* padding-left: 100px; */
   justify-content: flex-start;
   flex: 0 0 100%;
   padding-top: 30px;
+  height:100vh;
 }
 
 .timeline-content {
@@ -441,7 +396,6 @@ button {
 }
 
 @media only screen and (max-width: 1000px) {
-/* @media only screen and (max-width: 748px) { */
 
 body {
   overflow-x:hidden;
