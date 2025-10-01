@@ -80,7 +80,7 @@ li.list-icon {
     background-color: #fff;
     height: 100vh;
     opacity: 0.4;
-    width: 50px;
+    width: 55px;
     top: 0;
 }
 
@@ -92,7 +92,7 @@ li.list-icon {
     background-color: #ccc;
     height: 100vh;
     opacity: 0.4;
-      width: 50px;
+    width: 55px;
     top: 0;
 }
 
@@ -108,7 +108,7 @@ button#right-arrow::after {
     content: "\e5cc";
     font-family: "Material Icons Outlined";
     font-size: 8em;
-    right: -38px;
+    right: -33px;
     display: inline-block;
     vertical-align: middle;
     top: 200px;
@@ -119,7 +119,7 @@ button#left-arrow::after {
     content: "\e5cb";
     font-family: "Material Icons Outlined";
     font-size: 8em;
-    left: -42px;
+    left: -33px;
     display: inline-block;
     vertical-align: middle;
     top: 200px;
