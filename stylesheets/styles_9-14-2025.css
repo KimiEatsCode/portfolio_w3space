@@ -149,13 +149,36 @@ button#left-arrow::after {
   padding-left:130px;
 }
 
-
-#resume {
+.icon-container {
     position: absolute;
+    top: 0;
+    right: 40px;
     z-index: 999;
-    display: block;
-    right: 100px;
-    top: 20px;
+    padding: 20px;
+}
+
+.icon-container a {
+    margin-right: 10px;
+    text-decoration: none;
+} 
+
+
+#resume::before {
+  content: "\e873";
+  font-family: "Material Icons Outlined";
+  font-size: 50px;
+  color: #fff;
+  line-height: 1em;
+  opacity: 0.7;
+
+}
+
+#contact::before {
+    content:"\f22e";
+    font-family: "Material Icons Outlined";
+    font-size: 50px;
+    color: #fff;
+    line-height: 1em;
     opacity: 0.7;
 }
 
@@ -234,15 +257,6 @@ li.resume {
 
 #profile::before {
   content: "\e7fd";
-  font-family: "Material Icons Outlined";
-  font-size: 50px;
-  color: #fff;
-  line-height: 1em;
-}
-
-
-#resume::before {
-  content: "\e873";
   font-family: "Material Icons Outlined";
   font-size: 50px;
   color: #fff;
@@ -405,13 +419,12 @@ body {
     padding:0;
 }
 
-#resume {
-    position: absolute;
-    z-index: 999;
-    display: block;
+.icon-container {
+    position:static;
+    text-align:right;
     right: 15px;
-    top: 20px;
-    opacity: 0.7;
+    z-index: 999;
+    padding: 20px 0 0 20px;
 }
 
 .home-page-heading h1 {
@@ -422,7 +435,7 @@ body {
 
 #center-content {
   text-align:center;
-  padding-top:90px;
+  padding-top:20px;
    overflow-x:hidden;
 }
 
