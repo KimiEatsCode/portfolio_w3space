@@ -395,9 +395,11 @@ button {
   height:100vh;
 }
 
-.timeline-content {
-  color: #fff;
-  padding-top:50px;
+.backup-container {
+  text-decoration: none;
+  position: absolute;
+  bottom: 113px;
+  right: 20px;
 }
 
 .timeline-content h2 {
