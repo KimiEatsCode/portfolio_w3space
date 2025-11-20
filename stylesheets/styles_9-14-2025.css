@@ -130,9 +130,10 @@ button#left-arrow::after {
 }
 
 .backup-container {
-  float:right;
-  padding-right: 90px;
   text-decoration: none;
+  position: absolute;
+  bottom: 113px;
+  right: 20px;
 }
 
 .back-up-link {
@@ -395,11 +396,10 @@ button {
   height:100vh;
 }
 
-.backup-container {
-  text-decoration: none;
-  position: absolute;
-  bottom: 113px;
-  right: 20px;
+.timeline-content {
+  max-width:600px;
+  color: #fff;
+  padding-top:50px;
 }
 
 .timeline-content h2 {
