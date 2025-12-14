@@ -510,7 +510,7 @@ body {
 
 .backup-container {
   right:0;
-  bottom:0;
+  bottom:100px;
   text-align: center;
   width: 100%;
 }
