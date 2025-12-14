@@ -74,23 +74,25 @@ li.list-icon {
 
 #right-arrow-container {
   position:fixed;
+  display: flex;
+  justify-self: flex-end;
+  background-color: #fff;
+  height: 100vh;
+  padding:10px;
+  opacity: 0.4;
+  width: 55px;
+  top: 0;
   right:0;
-    display: flex;
-    justify-self: flex-end;
-    background-color: #fff;
-    height: 100vh;
-    opacity: 0.4;
-    width: 55px;
-    top: 0;
 }
 
 #left-arrow-container {
-      position: fixed;
-      left:0;
+    position: fixed;
+    left:0;
     display: flex;
     justify-self: flex-start;
     background-color: #ccc;
     height: 100vh;
+    padding:10px;
     opacity: 0.4;
     width: 55px;
     top: 0;
