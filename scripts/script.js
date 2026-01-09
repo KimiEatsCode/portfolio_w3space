@@ -13,8 +13,6 @@ const apps = ["Adobe Photoshop", "Adobe Illustrator","Canva Design","Front-End D
 
 const category_html_content = ["home.html", "print.html", "web.html", "code.html", "marketing.html", "genAI.html"];
 
-const project_html_content = ["brand-refresh.html", "core-values.html", "career-banner.html"];
-
 
 function getNextIndex(array) {
   currIndex = (currIndex + 1) % array.length; // Increment index and wrap around using modulo
@@ -53,7 +51,7 @@ async function getCurrentHtmlFileName(setFileNameIndex) {
 
   console.log(`Current category HTML file name: ${currentHtmlFileName}`);
   try {
-    const response = await fetch(`../../category-html-content/${currentHtmlFileName}`);
+    const response = await fetch(`html-content/${currentHtmlFileName}`);
     const html = await response.text();
 
     // Initialize the DOM parser
@@ -81,50 +79,12 @@ async function getCurrentHtmlFileName(setFileNameIndex) {
   }
 }
 
-//fetch project html content
-
-async function getProjectHtmlContent(setFileNameIndex) {
-
-  let projectHtmlFile = project_html_content[setFileNameIndex];
-
-  console.log(`Get project HTML file: ${projectHtmlFile}`);
-
-  try {
-    const response = await fetch(`../../project-html-content/${projectHtmlFile}`);
-    const html = await response.text();
-
-    // Initialize the DOM parser
-    const parser = new DOMParser();
-
-    // Parse the text
-    const doc = parser.parseFromString(html, "text/html");
-    console.log('doc -- ' + doc);
-
-    // You can now even select part of that html as you would in the regular DOM
-    // Example:
-    // Use the current file name (without extension) as the selector
-    const sectionId = projectHtmlFile.replace('.html', '');
-    console.log('section id: ' + sectionId);
-    const docArticle = doc.querySelector(`#${sectionId}`);
-
-    console.log(docArticle);
-
-    if (docArticle) {
-      document.getElementById(sectionId + '-content').innerHTML = docArticle.innerHTML;
-    } else {
-      document.getElementById(sectionId + '-content').innerHTML = "<p>html content not found.</p>";
-    }
-  } catch (error) {
-    console.error('Failed to fetch project page: ', error);
-  }
-}
-
 //fetch the HTML file name based on the current index
 async function getPrevHtmlFileName(setFileNameIndex) {
    let prevHtmlFileName = category_html_content[setFileNameIndex ?? currIndex];
 
   try {
-    const response = await fetch(`../../category-html-content/${prevHtmlFileName}`);
+    const response = await fetch(`html-content/${prevHtmlFileName}`);
     const html = await response.text();
 
     // Initialize the DOM parser
@@ -133,10 +93,6 @@ async function getPrevHtmlFileName(setFileNameIndex) {
     // Parse the text
     const doc = parser.parseFromString(html, "text/html");
     console.log('doc -- ' + doc);
-
-    // You can now even select part of that html as you would in the regular DOM
-    // Example:
-    // Use the current file name (without extension) as the selector
     const sectionId = prevHtmlFileName.replace('.html', '');
     const docArticle = doc.querySelector(`#${sectionId}`);
 
@@ -154,15 +110,12 @@ async function getPrevHtmlFileName(setFileNameIndex) {
 
 function scrollRight() {
   let nextIndex = getNextFileName();
-  // document.getElementById(nextIndex).scrollIntoView();
   getCurrentHtmlFileName();
   document.body.style.backgroundColor = colors[categories.indexOf(nextIndex)];
-  colors[categories.indexOf(nextIndex)];
 }
 
 function scrollLeft() {
   let prevIndex = getPrevFileName();
-  // document.getElementById(prevIndex).scrollIntoView();
   getPrevHtmlFileName();
   document.body.style.backgroundColor = colors[categories.indexOf(prevIndex)];
 }
@@ -171,7 +124,7 @@ function scrollLeft() {
 const rightArrowContainer = document.getElementById("right-arrow-container");
 
 rightArrowContainer.addEventListener("click", function(event) {
-  // event.preventDefault();
+  event.preventDefault();
   scrollRight();
 });
 
@@ -180,21 +133,13 @@ rightArrowContainer.addEventListener("click", function(event) {
 const leftArrowContainer = document.getElementById("left-arrow-container");
 
 leftArrowContainer.addEventListener("click", function(event) {
- 
+  event.preventDefault();
   scrollLeft();
 });
 
-
-/*adding click event listener to DOM elements for nav*/
-// document.querySelector('#left-arrow').addEventListener('click', scrollLeft, function(event) {
-//   event.preventDefault(); 
-//   console.log('left arrow button clicked');
-// });
-
-/**** Important to note: javascript to load project html content is actually in-line with html so it will load when the project html file loads - DomParser does not bring over script tag content****
-document.querySelector('#project-button-core-values').addEventListener('click', function(event) {
-  event.preventDefault();
-  getProjectHtmlContent(3);
-  console.log('Button clicked core values project should pop up');
+// Initialize: ensure currIndex matches the initially loaded content (home.html = index 0)
+document.addEventListener("DOMContentLoaded", function() {
+  currIndex = 0; // Explicitly set to match home.html which is loaded via jQuery
+  document.body.style.backgroundColor = colors[0]; // Set initial background color
 });
-*/
+
