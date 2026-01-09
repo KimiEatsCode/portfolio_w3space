@@ -6,9 +6,8 @@
   <meta name="keywords" content="Sarah Kimi Rettig work about portfolio">
   <meta name="author" content="Sarah Kimi Rettig">
   <meta name="viewport" content="minimum-scale=1.0, width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="stylesheets/styles_12-14-2025.css">
-   <link rel="stylesheet" href="stylesheets/modal-styles.css">
-  <link rel="stylesheet" href="stylesheets/snackbar-message-style.css">
+  <link rel="stylesheet" href="styles/main.css">
+
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 </head>
 
@@ -53,16 +52,15 @@
 <script type="text/javascript" src="scripts/script.js"></script>
 
 <script type="text/javascript">
-//jquery below 
+
   $(document).ready(function () {
 
-    $("#htmlFile").load("category-html-content/home.html");
+    $("#htmlFile").load("html-content/home.html");
   
     $(window).scroll(function () {
       if ($(this).scrollTop() > 50) {
         console.log("scrolling");
         $('#left-arrow-container').fadeOut();
-        //  document.getElementById("center-content").style.overflowX = "hidden";
       } else {
         $('#left-arrow-container').fadeIn();
       };
@@ -72,19 +70,18 @@
       if ($(this).scrollTop() > 50) {
         console.log("scrolling");
         $('#right-arrow-container').fadeOut();
-        //  document.getElementById("center-content").style.overflowX = "hidden";
       } else {
         $('#right-arrow-container').fadeIn();
       };
     })
 
-         $(window).scroll(function () {
-        if ($(this).scrollTop() > 50) {
-          $('.back-up-link').css('display', 'block');
-        } else {
-          $('.back-up-link').css('display', 'none');
-        }
-      });
+        $(window).scroll(function () {
+      if ($(this).scrollTop() > 50) {
+        $('.back-up-link').css('display', 'block');
+      } else {
+        $('.back-up-link').css('display', 'none');
+      }
+    });
     });
 
 </script> 
